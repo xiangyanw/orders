@@ -9,7 +9,8 @@ public class OrdersConfigurationProperties {
     private String domain = "";
 
     public URI getPaymentUri() {
-        return new ServiceUri(new Hostname("payment"), new Domain(domain), "/paymentAuth").toUri();
+//return new ServiceUri(new Hostname("payment"), new Domain(domain), "/paymentAuth").toUri();
+	return new ServiceUri(new Hostname("sock-shop-payment-03a9e0580eb5eb2b7.7d67968.vpc-lattice-svcs.us-west-2.on.aws"), new Domain(domain), "/").toUri();
     }
 
     public URI getShippingUri() {
